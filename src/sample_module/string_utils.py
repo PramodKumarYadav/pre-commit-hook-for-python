@@ -20,13 +20,16 @@ class StringUtils:
     def is_palindrome(text: str) -> bool:
         """Check if a string is a palindrome.
 
+        Ignores spaces, punctuation, and case when checking.
+
         Args:
             text: The string to check
 
         Returns:
             True if the string is a palindrome, False otherwise
         """
-        cleaned = text.lower().replace(" ", "")
+        # Remove non-alphanumeric characters and convert to lowercase
+        cleaned = "".join(char.lower() for char in text if char.isalnum())
         return cleaned == cleaned[::-1]
 
     @staticmethod
