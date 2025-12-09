@@ -24,7 +24,9 @@ class TestStringUtils:
     def test_capitalize_words(self):
         """Test word capitalization."""
         assert StringUtils.capitalize_words("hello world") == "Hello World"
-        assert StringUtils.capitalize_words("python programming") == "Python Programming"
+        assert (
+            StringUtils.capitalize_words("python programming") == "Python Programming"
+        )
         assert StringUtils.capitalize_words("a") == "A"
         assert StringUtils.capitalize_words("") == ""
 

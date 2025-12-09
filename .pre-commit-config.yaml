@@ -62,7 +62,6 @@ repos:
     hooks:
       - id: mypy
         name: Type check with mypy
-        additional_dependencies: [types-all]
         args: [--ignore-missing-imports, --show-error-codes]
 
   # Python testing with pytest
@@ -74,6 +73,6 @@ repos:
         language: system
         pass_filenames: false
         always_run: false
-        stages: [commit]
+        stages: [pre-commit]
         types: [python]
         verbose: true

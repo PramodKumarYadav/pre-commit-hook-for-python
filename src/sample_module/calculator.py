@@ -67,4 +67,4 @@ class Calculator:
         Returns:
             Result of base ** exponent
         """
-        return base**exponent
+        return float(base**exponent)
